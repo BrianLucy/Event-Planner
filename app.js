@@ -14,6 +14,21 @@ const port = process.env.PORT || 3002;
 
 app.use(bodyParser.json());
 
+// const events next, it get tricky here // -- Tien
+
+
+const user = (userId) => {
+  return User.findById(userId)
+  ,then(user => {
+    return { ...user._doc, _id: user.id };
+  })
+  .catch(err => {
+    throw err;
+  });
+}
+
+
+
 app.use(
   "/graphql",
   graphqlHttp({
@@ -23,12 +38,15 @@ app.use(
           title: String!
           description: String!
           date: String!
+          creator: User!
+
         }
         
         type User {
           _id: ID!
           email: String!
           password: String
+          createdEvents: [Event!]
 
         }
 
@@ -62,7 +80,10 @@ app.use(
         return Event.find()
           .then((events) => {
             return events.map((event) => {
-              return { ...event._doc, _id: event.id };
+              return { ...event._doc,
+                 _id: event.id,
+                 creator : user.bind(this, event._doc.creator)
+                };
             });
           })
           .catch((err) => {
