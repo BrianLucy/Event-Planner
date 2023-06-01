@@ -3,7 +3,11 @@ const bodyParser = require("body-parser");
 const graphqlHttp = require("express-graphql").graphqlHTTP;
 const { buildSchema } = require("graphql");
 const mongoose = require("mongoose");
+// adding bcryptjs //
+const bcrypt = require("bcryptjs");
+
 const Event = require("./models/event");
+const User = require("./models/user");
 
 const app = express();
 const port = process.env.PORT || 3002;
@@ -20,11 +24,23 @@ app.use(
           description: String!
           date: String!
         }
+        
+        type User {
+          _id: ID!
+          email: String!
+          password: String
+
+        }
 
         input EventInput {
           title: String!
           description: String!
           date: String!
+        }
+
+        input UserInput {
+          email: String!
+          password: String!
         }
 
         type RootQuery {
@@ -33,6 +49,7 @@ app.use(
 
         type RootMutation {
             createEvent(eventInput: EventInput): Event
+            createUser(userInput: UserInput): User
         }
 
         schema {
@@ -56,21 +73,57 @@ app.use(
         const event = new Event({
           title: args.eventInput.title,
           description: args.eventInput.description,
-          date: new Date(args.eventInput.date)
+          date: new Date(args.eventInput.date),
+          creator: ''
         });
+        let createdEvent;
+        
         return event
           .save()
           .then((result) => {
-            console.log(result);
-            return { ...result._doc, _id: result._doc._id.toString() }; //The object that you get from JSON.parse() is a plain JavaScript object. Using spread syntax copies the properties from that object one-by-one into a new object passed to the Item constructor
+            createdEvent = { ...result._doc, _id: result._doc._id.toString() };
+            return User.findById('')
+            
+          })
+          .then(user => {
+            if (user) {
+              throw new Error('User already exists.')
+            }
+            user.createdEvents.push(event);
+            return user.save();
+          })
+          .then(result => {
+            return createdEvent;
           })
           .catch((err) => {
             console.log(err);
             throw err;
           });
+      },
+      createUser: (args) => {
+        return User.findOne({ email: args.userInput.email }).then(user => {
+          if (user) {
+            throw new Error('User already exists.')
+          }
+          return bcrypt.hash(args.userInput.password, 12);
+        })
+          .then(hashedPassword => {
+            const user = new User({
+              email: args.userInput.email,
+              password: hashedPassword
+            });
+            return user.save();
+          })
+          .then(result => {
+            return { ...result._doc, password: null, _id: result.id };
+          })
+          .catch(err => {
+            throw err;
+          });
+
       }
     },
-    graphiql: true,
+    graphiql: true, // graphiql to testing
   })
 );
 mongoose
