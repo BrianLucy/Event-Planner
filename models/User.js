@@ -5,20 +5,21 @@ const mongoose = require("mongoose"); // import mongoose package
 const Schema = mongoose.Schema; // creating the schema
 
 const UserSchema = new Schema({ // all string and required to enter username, email, and password //
-    username : {
-        type: String,
-        required: true,
-        unique: true,
+    email: {
+        type : String,
+        required: true
     },
-    email : {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    password : {
+    password: {
         type: String,
         required: true
     },
+    createdEvents: [
+        {
+        type: Schema.Types.ObjectId,
+        ref: 'Event' // this is important for mongoose to know that this is a relationship between the two models // // use ref Event models //
+        }
+    ]
+    
 });
 
 module.exports = mongoose.model('User', UserSchema);
