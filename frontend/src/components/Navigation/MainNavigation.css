@@ -1,0 +1,11 @@
+.main-navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3.5rem;
+    background: rgb(131, 131, 220);
+    padding: 0rem;
+    display: flex;
+}
+
