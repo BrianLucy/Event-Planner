@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_USER": "maha-omar",
+    "MONGO_PASSWORD": "password-Mongo",
+    "MONGO_DB": "events-planner-db"
+  }
+}
