@@ -3,11 +3,10 @@ const bodyParser = require("body-parser");
 const graphqlHttp = require("express-graphql").graphqlHTTP;
 const { buildSchema } = require("graphql");
 const mongoose = require("mongoose");
+const Event = require("./models/event");
 
 const app = express();
-
-//temporary..global const to use it in resolver function to store the data
-const events = [];
+const port = process.env.PORT || 3002;
 
 app.use(bodyParser.json());
 
@@ -43,18 +42,33 @@ app.use(
     `),
     rootValue: {
       events: () => {
-        return events;
+        return Event.find()
+          .then((events) => {
+            return events.map((event) => {
+              return { ...event._doc, _id: event.id };
+            });
+          })
+          .catch((err) => {
+            throw err;
+          });
       },
       createEvent: (args) => {
-        const event = {
-          _id: Math.random().toString(),
-          title: args.eventInput.title,//args will hold all the arguments that we get in the input
+        const event = new Event({
+          title: args.eventInput.title,
           description: args.eventInput.description,
-          date: args.eventInput.date,
-        };
-        events.push(event);//push it to the global varibale
-        return event;
-      },
+          date: new Date(args.eventInput.date)
+        });
+        return event
+          .save()
+          .then((result) => {
+            console.log(result);
+            return { ...result._doc, _id: result._doc._id.toString() }; //The object that you get from JSON.parse() is a plain JavaScript object. Using spread syntax copies the properties from that object one-by-one into a new object passed to the Item constructor
+          })
+          .catch((err) => {
+            console.log(err);
+            throw err;
+          });
+      }
     },
     graphiql: true,
   })
@@ -63,5 +77,5 @@ mongoose
   .connect(
     `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@devapi.b0zoipm.mongodb.net/${process.env.MONGO_DB}`
   )
-  .then(() => app.listen(3002, () => console.log("server is running")))
+  .then(() => app.listen(port, () => console.log("server is running")))
   .catch((err) => console.log(err));
