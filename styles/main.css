@@ -1,0 +1,15 @@
+body {
+  background: lightblue;
+  color: #fff;
+  padding: 25px;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 15px;
