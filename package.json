@@ -2,10 +2,10 @@
   "name": "codingbootcampproject3",
   "version": "1.0.0",
   "description": "",
-  "main": "server/app.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server/app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,6 @@
     "express": "^4.18.2",
     "express-graphql": "^0.12.0",
     "graphql": "^16.6.0",
-    "nodemon": "^2.0.22",
-    "react-router-dom": "^6.11.2"
+    "nodemon": "^2.0.22"
   }
 }
