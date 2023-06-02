@@ -4,8 +4,8 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
 import AuthPage from './pages/Auth';
 import BookingPage from './pages/Booking';
-import EventsgPage from './pages/Events';
-import MainNavigation from './components/Navigation/Mainavigation';
+import EventsPage from './pages/Events';
+import MainNavigation from './components/Navigation/MaiNavigation';
 
 import './App.css';
 
@@ -22,7 +22,7 @@ class App extends Component{
       <Switch>
         <Redirect from="/" to="/auth" exact />
         <Route path="/auth" Component={AuthPage}/>
-        <Route path="/events" Component={EventsgPage}/>
+        <Route path="/events" Component={EventsPage}/>
         <Route path="/bookings" Component={BookingPage}/>
         </Switch>
         </main>
