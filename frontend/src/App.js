@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 
 import React, {Component} from 'react';
-import {BrowserRoute, Route, Redirect, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
 import AuthPage from './pages/Auth';
 import BookingPage from './pages/Booking';
 import EventsgPage from './pages/Events';
@@ -15,7 +15,7 @@ class App extends Component{
 // function App() {
   render() {
     return (
-      <BrowserRoute>
+      <BrowserRouter>
       <React.Fragment>
         <MainNavigation/>
         <main className="main-content">
@@ -27,7 +27,7 @@ class App extends Component{
         </Switch>
         </main>
         </React.Fragment>
-        </BrowserRoute>
+        </BrowserRouter>
     );
   }
 }
