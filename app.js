@@ -1,10 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const graphqlHttp = require('express-graphql');
+const graphqlHttp = require('express-graphql').graphqlHTTP;
 const { buildSchema } = require('graphql');
 const mongoose = require('mongoose');
 
 const app = express();
+const port = process.env.PORT || 3002;
 
 const events = [];
 
@@ -58,6 +59,9 @@ app.use(
   })
 );
 
-mongoose.connect('')
-
-app.listen(3000);
+mongoose
+  .connect(
+    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@devapi.b0zoipm.mongodb.net/${process.env.MONGO_DB}`
+  )
+  .then(() => app.listen(port, () => console.log("server is running")))
+  .catch((err) => console.log(err));
