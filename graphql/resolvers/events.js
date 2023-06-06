@@ -1,5 +1,5 @@
 const Event = require("../../models/event");
-
+const { user } = require("./add")
 
 const transformEvent = (event) => {
   return {
