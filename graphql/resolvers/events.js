@@ -1,14 +1,6 @@
 const Event = require("../../models/event");
-const { user } = require("./add")
+const { transformEvent } = require("./add");
 
-const transformEvent = (event) => {
-  return {
-    ...event._doc,
-    _id: event.id,
-    date: new Date(event._doc.date).toISOString(),
-    creator: user.bind(this, event.creator),
-  };
-};
 
 module.exports = {
   events: async () => {
@@ -25,7 +17,6 @@ module.exports = {
     const event = new Event({
       title: args.eventInput.title,
       description: args.eventInput.description,
-      price: +args.eventInput.price,
       date: new Date(args.eventInput.date),
       creator: "647ea056f7abf6d822f82874",
     });

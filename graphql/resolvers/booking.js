@@ -1,18 +1,8 @@
 const Event = require("../../models/event");
 const Booking = require("../../models/booking");
-const { singleEvent, user } = require("./add");
+const { transformBooking, transformEvent } = require("./add");
 
 
-const transformBooking = (booking) => {
-  return {
-    ...booking._doc,
-    _id: booking.id,
-    user: user.bind(this, booking._doc.user),
-    event: singleEvent.bind(this, booking._doc.event),
-    createdAt: new Date(booking._doc.createdAt).toISOString(),
-    updatedAt: new Date(booking._doc.updatedAt).toISOString(),
-  };
-};
 
 module.exports = {
   bookings: async () => {
