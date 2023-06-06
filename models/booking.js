@@ -6,13 +6,14 @@ const bookingSchema = new Schema(
   {
     event: {
       type: Schema.Types.ObjectId,
-      ref: 'Event'
+      ref: "Event",
     },
     user: {
       type: Schema.Types.ObjectId,
-      ref: 'User'
-    }
+      ref: "User",
+    },
   },
+  // mongoose will automatically add createdAt and updatedAt fields
   { timestamps: true }
 );
 
