@@ -1,0 +1,38 @@
+.authentication-form{
+    width: 30rem;
+    max-width: 80%;
+    margin: 5rem auto;
+}
+
+.control label,
+.control input
+{
+    width: 100%;
+    display: block;
+}
+
+.control label{
+    margin-bottom: 0.7rem;
+}
+
+.control{
+    margin-bottom: 1rem ;
+}
+
+.actions button{
+    background: rgb(92, 92, 235);
+    font: inherit;
+    border: 10px solid rgb(92, 92, 235);
+    border-radius: 4px;
+    padding: 0.3rem 1rem;
+    margin-right: 1rem;
+    box-shadow: 1px 1px 5px black;
+    color: white;
+    cursor: pointer;
+}
+
+.actions button:hover,
+.actions button:active{
+    background: green;
+    border-color: green;
+}
