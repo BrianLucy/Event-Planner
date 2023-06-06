@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
 import AuthPage from './pages/Auth';
 import BookingPage from './pages/Booking';
 import EventsPage from './pages/Events';
+// import LoginPage from './login/Events';
 import MainNavigation from './components/Navigation/MaiNavigation';
 
 import './App.css';
@@ -24,6 +25,7 @@ class App extends Component{
         <Route path="/auth" Component={AuthPage}/>
         <Route path="/events" Component={EventsPage}/>
         <Route path="/bookings" Component={BookingPage}/>
+        {/* <Route path="/login" Component={LoginPage}/> */}
         </Switch>
         </main>
         </React.Fragment>
