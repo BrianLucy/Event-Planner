@@ -1,4 +1,5 @@
 const Event = require("../../models/event");
+const User = require("../../models/user");
 const { transformEvent } = require("./add");
 
 
@@ -13,18 +14,22 @@ module.exports = {
       throw err;
     }
   },
-  createEvent: async (args) => {
+  createEvent: async (args, req) => {
+    if (!req.isAuth) {
+      throw new Error("Unauthenticated!");
+    }
+    //if there is err the rest of the code will not executed
     const event = new Event({
       title: args.eventInput.title,
       description: args.eventInput.description,
       date: new Date(args.eventInput.date),
-      creator: "647ea056f7abf6d822f82874",
+      creator: req.userId
     });
     let createdEvent;
     try {
       const result = await event.save();
       createdEvent = transformEvent(result);
-      const creator = await User.findById("647ea056f7abf6d822f82874");
+      const creator = await User.findById(req.userId);
 
       if (!creator) {
         throw new Error("User not found.");
