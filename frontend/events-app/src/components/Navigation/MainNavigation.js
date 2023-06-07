@@ -10,7 +10,7 @@ const mainNavigation = (props) => (
     <nav className="main-navigation__items">
       <ul>
         <li>
-          <NavLink to="/auth">Authenticate</NavLink>
+          <NavLink to="/auth">Login</NavLink>
         </li>
         <li>
           <NavLink to="/events">Events</NavLink>
