@@ -42,3 +42,7 @@ module.exports = {
     return { userId: user.id, token: token, tokenExpiration: 1 };
   }
 };
+
+//Token authentication allows users to verify their identity, and in return receive a unique access token. During the life of the token, users then access the website or app that the token has been issued for, rather than having to re-enter credentials each time they go back to the same webpage, protected with that same token.
+
+//Auth tokens work like a stamped ticket. The user retains access as long as the token remains valid. Once the user logs out or quits an app, the token is invalidated.
