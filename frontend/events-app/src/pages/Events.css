@@ -4,13 +4,37 @@
   font-family: sans-serif;
   margin: 0;
   text-align: center;
+<<<<<<< HEAD
 } */
 
 .events-control{
   text-align: center;
   border: 1px solid blue;
+=======
+}
+.events-control {
+  text-align: center;
+  border: 1px solid #5101d1;
+>>>>>>> 37dedce1189e1df69d001f100c2ebc9b31e09272
   padding: 1rem;
   margin: 2rem auto;
   width: 30rem;
   max-width: 80%;
+<<<<<<< HEAD
+=======
+}
+
+.events__list {
+  width: 40rem;
+  max-width: 90%;
+  margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+}
+
+.events__list-item {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #5101d1;
+>>>>>>> 37dedce1189e1df69d001f100c2ebc9b31e09272
 }
