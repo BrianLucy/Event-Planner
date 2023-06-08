@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 
-
 class AuthPage extends Component {
   state = {
     isLogin: true,
@@ -93,6 +92,7 @@ class AuthPage extends Component {
         </div>
       </form>
     );
+
   }
 }
 
