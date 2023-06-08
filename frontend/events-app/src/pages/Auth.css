@@ -1,0 +1,29 @@
+body {
+  background: lightblue;
+  padding: 25px;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
