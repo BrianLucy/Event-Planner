@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 
 
+import AuthContext from "../context/auth-context";
+
 class AuthPage extends Component {
   state = {
     isLogin: true,
   };
+
+  static contextType = AuthContext;
 
   constructor(props) {
     super(props);
@@ -66,7 +70,13 @@ class AuthPage extends Component {
         return res.json();
       })
       .then((resData) => {
-        console.log(resData);
+        if (resData.data.login.token) {
+          this.context.login(
+            resData.data.login.token,
+            resData.data.login.userId,
+            resData.data.login.tokenExpiration
+          );
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -91,6 +101,28 @@ class AuthPage extends Component {
           </button>
         </div>
       </form>
+<div class="header">
+    <h1>P<sup>4</sup> Personal Party Planning Place</h1>
+  <p><center>One stop shop for you to plan your next event</center></p>
+</div>
+<br>
+<div class="row">
+  <div class="column">
+      <img src="styles\graduation.jpg" alt="graduation" style="width:100%">
+      <figcaption><strong>Graduations</strong><br>Details and information </figcaption>
+  </div>
+  <div class="column">
+    <img src="styles\birthday party.jpg" alt="birthday party" style="width:100%">
+  <figcaption><strong>Birthdays</strong><br>Details and information</figcaption>
+  </div>
+  <div class="column">
+    <img src="styles\wedding reception.jpg" alt="wedding reception" style="width:100%">
+  <figcaption><strong>Wedding receptions</strong><br>details and information</figcaption>
+  </div>
+</div>
+
+<br>
+<hr>
     );
 
   }
