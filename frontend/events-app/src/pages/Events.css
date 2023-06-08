@@ -1,7 +1,16 @@
-body {
+/* body {
   background: lightblue;
   padding: 25px;
   font-family: sans-serif;
   margin: 0;
   text-align: center;
+} */
+
+.events-control{
+  text-align: center;
+  border: 1px solid blue;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 30rem;
+  max-width: 80%;
 }
