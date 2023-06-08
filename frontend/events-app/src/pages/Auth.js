@@ -226,6 +226,7 @@ class AuthPage extends Component {
         </div>
       </form>
     );
+
   }
 }
 export default AuthPage;
