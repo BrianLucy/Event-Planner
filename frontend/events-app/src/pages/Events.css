@@ -1,27 +1,17 @@
-/* body {
+body {
   background: lightblue;
   padding: 25px;
   font-family: sans-serif;
   margin: 0;
   text-align: center;
-<<<<<<< HEAD
-} */
-
-.events-control{
-  text-align: center;
-  border: 1px solid blue;
-=======
 }
 .events-control {
   text-align: center;
   border: 1px solid #5101d1;
->>>>>>> 37dedce1189e1df69d001f100c2ebc9b31e09272
   padding: 1rem;
   margin: 2rem auto;
   width: 30rem;
   max-width: 80%;
-<<<<<<< HEAD
-=======
 }
 
 .events__list {
@@ -36,5 +26,4 @@
   margin: 1rem 0;
   padding: 1rem;
   border: 1px solid #5101d1;
->>>>>>> 37dedce1189e1df69d001f100c2ebc9b31e09272
 }

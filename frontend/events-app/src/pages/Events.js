@@ -1,14 +1,8 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-import Modal from "../components/Modal/Modal";
-import './Events.css';
-=======
-
 import Modal from "../components/Modal/Modal";
 import Backdrop from "../components/Backdrop/Backdrop";
-import AuthContext from "../context/auth-context";
-import "./Events.css";
->>>>>>> 37dedce1189e1df69d001f100c2ebc9b31e09272
+import AuthContext from "../context/auth-context"
+import './Events.css';
 
 class EventsPage extends Component {
   state = {
@@ -146,15 +140,6 @@ class EventsPage extends Component {
 
     return (
       <React.Fragment>
-<<<<<<< HEAD
-        <Modal>
-          {/* <P>Modal Content</P> */}
-        </Modal>
-      <div className="events-control">
-        {/* <p>What event do you have in mind?!</p> */}
-        <button className="btn">Create Event</button>
-      </div>
-=======
         {this.state.creating && <Backdrop />}
         {this.state.creating && (
           <Modal
@@ -193,7 +178,6 @@ class EventsPage extends Component {
           </div>
         )}
         <ul className="events__list">{eventList}</ul>
->>>>>>> 37dedce1189e1df69d001f100c2ebc9b31e09272
       </React.Fragment>
     );
   }

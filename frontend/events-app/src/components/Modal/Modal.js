@@ -1,24 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import './Modal.css'
-
-
-const modal = props => (
-    <div className="modal">
-    <header>{props.title}</header>
-    <section className="modal_content">
-        {props.children}
-
-    </section>
-    <section className="modal-actions">
-        {props.canCancel && <button className="btn">Cancel</button>}
-        {props.canConfirm &&<button className="btn">Confirm</button>}
-    </section>
-    </div>
-);
-
-export default modal;
-=======
 
 import "./Modal.css";
 
@@ -44,4 +24,3 @@ const modal = (props) => (
 );
 
 export default modal;
->>>>>>> 37dedce1189e1df69d001f100c2ebc9b31e09272

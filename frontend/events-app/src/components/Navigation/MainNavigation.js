@@ -23,7 +23,6 @@ const mainNavigation = props => (
                 <NavLink to="/events">Events</NavLink>
               </li>
               {context.token && (
-<<<<<<< HEAD
                 <React.Fragment>
                 <li>
                   <NavLink to="/bookings">Bookings</NavLink>
@@ -32,16 +31,6 @@ const mainNavigation = props => (
                   <button onClick={context.logout}>Logout</button>
                 </li>
                 </React.Fragment>
-=======
-                <>
-                  <li>
-                    <NavLink to="/bookings">Bookings</NavLink>
-                  </li>
-                  <li>
-                    <button onClick={context.logout}>Logout</button>
-                  </li>
-                </>
->>>>>>> 37dedce1189e1df69d001f100c2ebc9b31e09272
               )}
             </ul>
           </nav>
