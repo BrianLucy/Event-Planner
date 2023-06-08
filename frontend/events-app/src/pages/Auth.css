@@ -12,10 +12,8 @@ body {
   background: #1abc9c;
   color: white;
   font-size: 15px;
-
-  * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
   
   .column {
     float: left;
