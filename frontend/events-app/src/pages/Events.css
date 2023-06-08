@@ -5,3 +5,7 @@ body {
   margin: 0;
   text-align: center;
 }
+
+.btn {
+  opacity: 0.0;
+}
