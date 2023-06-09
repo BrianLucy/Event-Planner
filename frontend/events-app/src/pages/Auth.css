@@ -1,29 +1,74 @@
-body {
-  background: lightblue;
-  padding: 25px;
-  font-family: sans-serif;
-  margin: 0;
+/* .auth-form {
+  width: 25rem;
+  max-width: 80%;
+  margin: 5rem auto;
+} */
+
+ .main{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding: 90px 0 90px 0;
+
+}
+.App{
+  position: relative;
+  top: 500px;
+  justify-content: center;
+  height: 500px;
+  width: 30%;
+  box-shadow: 11px 12px 13px 12px rgb(219, 211, 211);
+  padding-top: 30px;
+  border-radius: 60px;
+  background-color: rgba(186, 156, 156, 0.6)
+
+}
+.auth-form {
+  width: 25rem;
+  max-width: 80%;
+  margin: 5rem auto;
+
 }
 
-/* Header/Logo Title */
-.header {
-  padding: 5px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 15px;
-  box-sizing: border-box;
+.form-control label,
+.form-control input {
+  width: 100%;
+  display: block;
+  height: 30px;
+  border-radius: 60px;
+  box-shadow: inset 0px 0px 25px 0px #c1baba;
+  margin-bottom: 20px;
+ ;
 }
+.email,
+.password {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-control label {
+  margin-bottom: 0.3rem;
+}
+
+.form-control {
+  margin-bottom: 0.5rem;
   
-  .column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-  }
-  
-  /* Clearfix (clear floats) */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+}
+
+.form-actions button {
+  background: #9e9494;
+  font: inherit;
+  border: 1px solid #5b4f4f;
+  border-radius: 30px;
+  padding: 0.25rem 1rem;
+  margin-right: 1rem;
+  box-shadow: 2px 2px 5px rgba(67, 63, 63, 0.26);
+  color: white;
+  cursor: pointer;
+}
+
+.form-actions button:hover,
+.form-actions button:active {
+    background: #4d3b3b;
+    border-color: #4d3b3b;
+} 

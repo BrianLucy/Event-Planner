@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import AuthPage from "./pages/Auth";
 import BookingsPage from "./pages/Bookings";
 import EventsPage from "./pages/Events";
+import HomePage from "./components/Home/Home";
 import MainNavigation from "./components/Navigation/MainNavigation";
 import AuthContext from './context/auth-context';
 import "./App.css";
@@ -32,6 +33,9 @@ class App extends Component {
             <MainNavigation />
             <main className="main-content">
               <Switch>
+                <Route exact path="/">
+                  <HomePage />
+                </Route>
                 {this.state.token && <Redirect from="/" to="/events" exact />}
                 {this.state.token && (
                   <Redirect from="/auth" to="/events" exact />

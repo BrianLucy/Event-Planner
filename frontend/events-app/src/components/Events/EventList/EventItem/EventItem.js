@@ -1,5 +1,6 @@
 import React from 'react';
-import './EventItem.css';
+
+import "./EventItem.css";
 
 const eventItem = props => (
     <li>
