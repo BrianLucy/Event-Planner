@@ -8,6 +8,7 @@ class BookingsPage extends Component {
   state = {
     isLoading: false,
     bookings: [],
+    //outputType: "list"
   };
 
   static contextType = AuthContext;

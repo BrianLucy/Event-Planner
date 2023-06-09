@@ -1,4 +1,10 @@
-.main{
+/* .auth-form {
+  width: 25rem;
+  max-width: 80%;
+  margin: 5rem auto;
+} */
+
+ .main{
   text-align: center;
   justify-content: center;
   display: flex;
@@ -65,4 +71,4 @@
 .form-actions button:active {
     background: #4d3b3b;
     border-color: #4d3b3b;
-}
+} 
