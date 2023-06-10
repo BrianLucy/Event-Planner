@@ -7,14 +7,14 @@
   height: 400px;
   width: 50%;
   box-shadow: 12px 12px 10px 10px #cfc7c4;
-  padding-top: 30px;
-  border-radius: 60px;
-  background-color: #B9B7BD
+  padding-top: 40px;
+ 
+
 
 }
 .auth-form {
   width: 25rem;
- margin: 5rem auto;
+ margin: 1rem auto;
 
 }
 
@@ -23,13 +23,16 @@
   width: 100%;
   display: block;
   height: 30px;
-  border-radius: 60px;
-  box-shadow: inset 0px 0px 25px 0px #686d70;
   margin-bottom: 20px;
- ;
+ 
 }
-
-
+.sign-tag{
+  font-size: 25px;
+}
+.img{
+  width: 90px;
+  margin: 10px;
+}
 
 .form-control label {
   margin-bottom: 0.4rem;

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import AuthContext from "../context/auth-context";
 
-
 import "./Auth.css";
 class AuthPage extends Component {
   state = {
@@ -86,6 +85,8 @@ class AuthPage extends Component {
     return (
       <>
         <div className="App">
+          <div className="sign-tag">Sign in wih an existing account</div>
+          <img className="img" src="https://res.cloudinary.com/closebrace/image/upload/w_400/v1491315007/usericon_id76rb.png" alt=""></img>
           <form className="auth-form" onSubmit={this.submitHandler}>
             <div className="form-control">
               <label htmlFor="email">E-Mail</label>
@@ -113,7 +114,6 @@ class AuthPage extends Component {
             </div>
           </form>
         </div>
-       
       </>
     );
   }

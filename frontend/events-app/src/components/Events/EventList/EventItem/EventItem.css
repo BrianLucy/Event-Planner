@@ -1,25 +1,45 @@
 .events__list-item {
     margin: 1rem 0;
     padding: 1rem;
-    border: 1px solid #5101d1;
+    border: 1px solid #272728;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .events__list-item h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    color: #5101d1;
-  }
-
-  .events__list-item h2 {
+  .title {
     font-size: 1rem;
+    font-weight: lighter;
     margin: 0;
-    color: #7c7c7c;
+    color: #49565f;
   }
 
-  .event__list-item p {
-    margin: 0;
+  .events-list {
+     border: 1px solid #272728;
+     margin-bottom: 20px;
   }
+
+  p {
+    margin: 0;
+    font-size: 20px;
+    padding: 10px;
+  }
+.btn{
+  background: #868B8E;
+  font: inherit;
+  border: 1px solid #868B8E;
+  border-radius: 6px;
+  padding: 0.25rem 1rem;
+  margin-right: 1rem;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px rgba(67, 63, 63, 0.26);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+    background: #49565f;
+    border-color: #4d3b3b;
+} 
 
