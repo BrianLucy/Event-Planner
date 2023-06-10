@@ -179,7 +179,7 @@ class EventsPage extends Component {
         `,
       variables: {
         id: this.state.selectedEvent._id,
-      }
+      },
     };
 
     fetch("http://localhost:3005/graphql", {
