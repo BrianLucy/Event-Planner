@@ -24,7 +24,7 @@ export default function Posts() {
           <article className="post__card">
             <img
               className="img2"
-              src="https://o.remove.bg/downloads/d0527f7f-654c-4f68-8289-bccd58e1365f/th-removebg-preview.png"
+              src="https://i.pinimg.com/originals/1b/9c/5e/1b9c5edf895e27b842ce49c73d48a385.gif"
               alt=""
             ></img>
 

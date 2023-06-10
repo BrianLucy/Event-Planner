@@ -15,18 +15,17 @@ h5{
     font-size: 25px;
 }
 
-
-.img2{
- width: 100px;
- height: 150px;
- padding: 20px;
- 
-
-}
 .img1{
     width: 100px;
     padding: 20px;
 }
+.img2{
+ width: 120px;
+ height: 150px;
+ padding: 20px;
+
+}
+
 .img3{
     width:120px;
     padding: 30px;
@@ -36,7 +35,7 @@ h5{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.8rem;
-    margin-left: 200px;
+    margin-left: 40px;
    
 }
 
@@ -44,10 +43,11 @@ h5{
     background: linear-gradient(30deg, rgb(149, 147, 147), transparent);
     border:0px solid transparent;
     border-radius: 1rem;
+    box-shadow: 6px 6px rgba(141, 136, 136);
     padding: 1rem;
     text-align: center;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     
 }
 
