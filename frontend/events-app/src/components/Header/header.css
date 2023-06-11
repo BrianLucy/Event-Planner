@@ -28,3 +28,19 @@
   margin-top: 50px;
   object-fit: cover;
 }
+
+@media screen and (max-width: 600px) {
+  .headerImg{
+    width: 130%;
+  }
+  .headerTitleLg{
+    position: absolute;
+    left: 120px;
+    font-size: 80px;
+  }
+  .headerTitleSm{
+    position: absolute;
+    left: 200px;
+    top: 30%;
+  }
+}

@@ -24,6 +24,7 @@
   display: block;
   height: 30px;
   margin-bottom: 20px;
+  padding-left: 10px;
  
 }
 .sign-tag{
@@ -60,3 +61,33 @@
     background: #49565f;
     border-color: #4d3b3b;
 } 
+
+@media screen and (max-width: 600px){
+  .form-control label,
+.form-control input {
+  width: 60%;
+  display: block;
+  height: 30px;
+ 
+ 
+}
+.form-control{
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+.App{
+  height: 450px;
+}
+
+.form-actions{
+ padding-left: 70px;
+ 
+}
+.form-actions button  {
+  display: flex;
+  margin-top: 10px;
+  
+ 
+
+}
+}
