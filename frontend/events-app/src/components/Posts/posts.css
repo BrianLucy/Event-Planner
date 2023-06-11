@@ -71,39 +71,23 @@ h5{
 /*media query for md devices*/
 @media screen and (max-width: 1024px){
 
-  .post__container{
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .post__me{
-    width: 50%;
-    margin: 2rem auto 4rem;
-  }
-  .post__content p{
-    margin: 1rem 0 1.5rem;
-  }
+ 
+  
 } 
 
 
 /*media query for sm devices*/
 @media screen and (max-width: 600px){
-    .post__me{
-        width: 65%;
-        margin: 0 auto 3rem;
-        background: none;
-    }
-    .post__me-image{
-        position: relative;
-        right: 30px;
-    }
+   .info{
+     padding: 30px;
+     text-align: center;
+
+   }
     .post__cards{
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr ;
+        gap: 1.5rem;
+        align-items: center;
     }
-    .post__content{
-        text-align: center;
-    }
-    .post__content p{
-        margin:1.5rem 0;
-        }
+    
+  
 }

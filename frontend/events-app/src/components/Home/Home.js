@@ -1,20 +1,22 @@
-import React, { Component } from "react";
+//import React, { Component } from "react";
 import Header from "../Header/Header";
 import Posts from "../Posts/Posts";
+
+
 import Footer from "../Footer/Footer"
 
-class HomePage extends Component {
-  render() {
+function HomePage(){
+   
     return (
       <>
         <Header />
-      
-          <Posts />
-        
+
+        <Posts />
+       
         <Footer />
       </>
     );
   }
-}
+
 
 export default HomePage;

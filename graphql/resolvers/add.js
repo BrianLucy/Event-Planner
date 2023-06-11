@@ -58,6 +58,7 @@ const transformEvent = (event) => {
   };
 };
 
+// function to populate the booking
 const transformBooking = (booking) => {
   return {
     ...booking._doc,

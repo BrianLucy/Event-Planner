@@ -2,10 +2,8 @@ const Event = require("../../models/event");
 const Booking = require("../../models/booking");
 const { transformBooking, transformEvent } = require("./add");
 
-
-
 module.exports = {
-  bookings: async () => {
+  bookings: async (args, req) => {
       if (!req.isAuth) {
         throw new Error("Unauthenticated!");
       }
@@ -15,6 +13,7 @@ module.exports = {
         return transformBooking(booking);
       });
     } catch (err) {
+      console.log(err)
       throw err;
     }
   },

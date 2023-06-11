@@ -12,6 +12,14 @@
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 600px) {
+  .main-navigation {
+    position: fixed;
+    left: -550px;
+    
+  }
+
+}
 
 
 .main-navigation__items {
