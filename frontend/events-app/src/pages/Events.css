@@ -7,9 +7,14 @@ body {
 }
 .events-control {
   text-align: center;
-  border: 1px solid #5101d1;
+  border: 1px solid #807876;
+  background: #E7D2CC;
   padding: 1rem;
   margin: 2rem auto;
   width: 30rem;
   max-width: 80%;
+}
+.p{
+  font-size: 20px;
+  
 }

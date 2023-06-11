@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Modal from "../components/Modal/Modal";
 import Backdrop from "../components/Backdrop/Backdrop";
 import EventList from "../components/Events/EventList/EventList";
-import Spinner from "../components/Spinner/Spinner";
 import AuthContext from "../context/auth-context";
 
 import "./Events.css";
@@ -179,7 +178,7 @@ class EventsPage extends Component {
         `,
       variables: {
         id: this.state.selectedEvent._id,
-      }
+      },
     };
 
     fetch("http://localhost:3005/graphql", {
@@ -260,21 +259,19 @@ class EventsPage extends Component {
         )}
         {this.context.token && (
           <div className="events-control">
-            <p>Share your own Events!</p>
+            <p className="p">Share your own Events!</p>
             <button className="btn" onClick={this.startCreateEventHandler}>
               Create Event
             </button>
           </div>
         )}
-        {this.state.isLoading ? (
-          <Spinner />
-        ) : (
+       
           <EventList
             events={this.state.events}
             authUserId={this.context.userId}
             onViewDetail={this.showDetailHandler}
           />
-        )}
+     
       </React.Fragment>
     );
   }

@@ -1,32 +1,20 @@
-/* .auth-form {
-  width: 25rem;
-  max-width: 80%;
-  margin: 5rem auto;
-} */
 
- .main{
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  padding: 90px 0 90px 0;
 
-}
 .App{
-  position: relative;
-  top: 500px;
-  justify-content: center;
-  height: 500px;
-  width: 30%;
-  box-shadow: 11px 12px 13px 12px rgb(219, 211, 211);
-  padding-top: 30px;
-  border-radius: 60px;
-  background-color: rgba(186, 156, 156, 0.6)
+  position: absolute;
+  top: 130px;
+  right: 25%;
+  height: 400px;
+  width: 50%;
+  box-shadow: 12px 12px 10px 10px #cfc7c4;
+  padding-top: 40px;
+ 
+
 
 }
 .auth-form {
   width: 25rem;
-  max-width: 80%;
-  margin: 5rem auto;
+ margin: 1rem auto;
 
 }
 
@@ -35,19 +23,19 @@
   width: 100%;
   display: block;
   height: 30px;
-  border-radius: 60px;
-  box-shadow: inset 0px 0px 25px 0px #c1baba;
   margin-bottom: 20px;
- ;
+ 
 }
-.email,
-.password {
-  padding: 10px;
-  font-size: 16px;
+.sign-tag{
+  font-size: 25px;
+}
+.img{
+  width: 90px;
+  margin: 10px;
 }
 
 .form-control label {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .form-control {
@@ -56,9 +44,9 @@
 }
 
 .form-actions button {
-  background: #9e9494;
+  background: #868B8E;
   font: inherit;
-  border: 1px solid #5b4f4f;
+  border: 1px solid #868B8E;
   border-radius: 30px;
   padding: 0.25rem 1rem;
   margin-right: 1rem;
@@ -69,6 +57,6 @@
 
 .form-actions button:hover,
 .form-actions button:active {
-    background: #4d3b3b;
+    background: #49565f;
     border-color: #4d3b3b;
 } 

@@ -6,6 +6,7 @@ import EventsPage from "./pages/Events";
 import HomePage from "./components/Home/Home";
 import MainNavigation from "./components/Navigation/MainNavigation";
 import AuthContext from './context/auth-context';
+
 import "./App.css";
 class App extends Component {
   state = {
@@ -50,6 +51,7 @@ class App extends Component {
                 {!this.state.token && <Redirect to="/auth" exact />}
               </Switch>
             </main>
+            
           </AuthContext.Provider>
         </React.Fragment>
       </BrowserRouter>
