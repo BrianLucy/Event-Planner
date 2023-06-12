@@ -2,6 +2,20 @@
 
 Event Planner is a web application that allows users to create, manage, and organize events. It provides features for event creation, listing, editing, and deletion, as well as user registration and authentication.
 
+## Application link
+The application has been deployed to Heroku,
+ [Click here to visit the live deployed site]()!
+
+ ![](./assets/p1.PNG)
+
+ ![](./assets/p2.PNG)
+
+ ![](./assets/p3.PNG)
+
+ ![](./assets/p4.PNG)
+
+ ![](./assets/p5.PNG)
+
 ## Features
 
 - User registration and authentication
@@ -30,10 +44,10 @@ Event Planner is a web application that allows users to create, manage, and orga
 2. Install the dependencies for the front-end and back-end:
 
    ```shell
-   cd event-planner
+   cd frontend
+   cd events-app
    npm install
-   cd client
-   npm install
+   npm start
    ```
 
 3. Configure the environment variables:
@@ -65,5 +79,20 @@ The application can be deployed using Heroku. Follow these steps to deploy:
 
 5. Once the deployment is complete, you can access the deployed application using the provided Heroku URL.
 
+## Developers
+[Maha Abdelnabi](https://github.com/Maha-Abdelnabi)
+
+[Somayyah Maqsudi](https://github.com/SomayyahMaqsudi)
+
+[Tien Ton](https://github.com/TimothyLai1121)
+
+[Brian Lucy](https://github.com/BrianLucy)
+
+[Brenden Thomas](https://github.com/mightjustdie)
+
+[Imani Santana](https://github.com/Santanaco)
+
+
 
 ## License
+This project is licensed under the MIT License - [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
