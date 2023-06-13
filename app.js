@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const graphqlHttp = require("express-graphql").graphqlHTTP;
 const isAuth = require("./middleware/is-auth");
 
+require("dotenv").config();
+
 const mongoose = require('mongoose');
 
 const graphQlSchema = require("./graphql/schema/index");
@@ -25,15 +27,7 @@ app.use((req, res, next) => {
 
 app.use(isAuth);
 
-// ==== if its production environment!
-// if (process.env.NODE_ENV === 'production') {
-// 	const path = require('path')
-// 	console.log('YOU ARE IN THE PRODUCTION ENV')
-// 	app.use('/static', express.static(path.join(__dirname, '../build/static')));
-// 	app.get('/', (req, res) => {
-// 		res.sendFile(path.join(__dirname, '../build/'))
-// 	});
-// }
+
 
 app.use(
   "/graphql",
