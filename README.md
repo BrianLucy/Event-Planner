@@ -4,7 +4,7 @@ Event Planner is a web application that allows users to create, manage, and orga
 
 ## Application link
 The application has been deployed to Heroku,
- [Click here to visit the live deployed site]()!
+ [Click here to visit the live deployed site](https://event-planner2.herokuapp.com/)!
 
  ![](./assets/p1.PNG)
 
